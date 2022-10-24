@@ -2,6 +2,7 @@
 -- We gebruiken cascade op het eind, omdat we relaties hebben gelegd tussen de tabellen. De ene tabel is afhankelijk van de ander, dus kun je die niet zomaar droppen. Cascade lost dit op.
 -- De television tabel is de tabel met de relaties, als we die als eerst droppen, hoeven we geen cascade te gebruiken. Je ziet ook dat we geen cascade voor cimodules hoeven te gebruiken, terwijl de televisions tabel daar wel een relatie mee heeft.
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS television_wall_brackets;
 DROP TABLE IF EXISTS remote_controllers CASCADE;
 DROP TABLE IF EXISTS televisions;
 DROP TABLE IF EXISTS cimodules;
