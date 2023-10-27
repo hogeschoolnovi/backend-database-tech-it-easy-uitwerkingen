@@ -121,8 +121,11 @@ INSERT INTO television_wall_brackets(television_id, wall_bracket_id) values (100
 INSERT INTO users (username, password, email) VALUES ('user', '$2a$12$7obBbnHFUkg9AaOUQ/mc5OzseFypWMg2pyB49c.3XAqKPYS.z3rHy','user@test.nl');
 INSERT INTO users (username, password, email) VALUES ('admin', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', 'admin@test.nl');
 
+
+UPDATE televisions SET remote_id = 1 WHERE id = 1001;
+
 -- Als laatste maken we nog een SELECT statement om de data uit de database te bekijken
 
-SELECT televisions.id AS tvid, remoteControllers.id AS rmid
-FROM televisions JOIN remoteControllers
- ON remoteControllers.id = televisions.remote_id;
+SELECT televisions.id AS tvid, remote_controllers.id AS rmid
+FROM televisions JOIN remote_controllers
+ ON remote_controllers.id = televisions.remote_id;
